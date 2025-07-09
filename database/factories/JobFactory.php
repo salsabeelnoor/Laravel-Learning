@@ -23,3 +23,4 @@ class JobFactory extends Factory
         ];
     }
 }
+//App\Models\Job::factory(100)->create()
