@@ -37,9 +37,9 @@
                     </x-form-field>
                     <x-form-field>
                         <div class="mt-2">
-                            <x-form-label for="password_confirm">Confirm Password</x-form-label>
-                            <x-form-input type="password" name="password_confirm" id="password_confirm" placeholder="$50,000 USD" required/>
-                            <x-form-error name="password_confirm"/>
+                            <x-form-label for="password_confirmation">Confirm Password</x-form-label>
+                            <x-form-input type="password" name="password_confirmation" id="password_confirmation" placeholder="$50,000 USD" required/>
+                            <x-form-error name="password_confirmation"/>
                         </div>
                     </x-form-field>
                 </div>

@@ -11,4 +11,7 @@ class SessionController extends Controller
     }
     public function store() {
     }
+    public function destroy() {
+        dd('log out'); 
+    }
 }
