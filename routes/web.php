@@ -9,6 +9,8 @@ use App\Http\Controllers\SessionController;
 //     return view('home');
 // });
 
+
+
 Route::view('/', 'home');
 
 Route::controller(JobController::class)->group(function(){
@@ -17,7 +19,7 @@ Route::controller(JobController::class)->group(function(){
 
     Route::get('/jobs/create','create');
 
-    Route::get('/jobs/{job}','show');
+    Route::get('/jobs/{job}','show')->middleware('auth');
 
     Route::post('/jobs','store')->middleware('auth');
 
