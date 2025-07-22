@@ -48,7 +48,7 @@ class JobController extends Controller
             return redirect('/login');
         }
 
-        Gate::authorize('edit-job', $job);
+        // Gate::authorize('edit-job', $job);
 
         // if(Gate::denies('edit-job', $job)) {
         //     abort(403, 'Unauthorized action.');
@@ -61,15 +61,15 @@ class JobController extends Controller
         return view('jobs.edit', ['job' => $job]);
     }
     public function update(Job $job) {
+        
+        //authorize request
+        // Gate::authorize('edit-job', $job);
+
         //validate request
         request()->validate([
             'title' => ['required', 'min:3'],
             'salary' => ['required']
         ]);
-
-        //authorize request
-        // ....
-
         //update the job
         // $job = Job::findOrFail($id);
         // $job->title = request('title');
@@ -85,8 +85,9 @@ class JobController extends Controller
         return redirect('/jobs/'.$job->id);
     }
     public function destroy() {
+        
         // authorize
-        // ...
+        // Gate::authorize('edit-job', $job);
 
         //delete
         $job->delete();
